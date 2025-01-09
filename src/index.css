@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@layer base {
+  :root {
+    --background: 20 16% 8%;
+    --foreground: 60 33% 98%;
+
+    --card: 20 16% 12%;
+    --card-foreground: 60 33% 98%;
+
+    --popover: 20 16% 12%;
+    --popover-foreground: 60 33% 98%;
+
+    --primary: 30 47% 64%;
+    --primary-foreground: 20 16% 8%;
+
+    --secondary: 20 16% 24%;
+    --secondary-foreground: 60 33% 98%;
+
+    --muted: 20 16% 16%;
+    --muted-foreground: 60 33% 96%;
+
+    --accent: 30 47% 64%;
+    --accent-foreground: 20 16% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 33% 98%;
+
+    --border: 20 16% 24%;
+    --input: 20 16% 24%;
+    --ring: 30 47% 64%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  .glass-card {
+    @apply bg-black/20 backdrop-blur-lg border border-white/10 rounded-lg;
+  }
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+}
